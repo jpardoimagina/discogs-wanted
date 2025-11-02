@@ -49,7 +49,7 @@ class DiscogsSellerFinder:
             print(f"✗ Error obteniendo wantlist: {e}")
             return []
     
-    def find_sellers_with_items(self, wantlist: List, max_items: int = None) -> Dict[str, List[Tuple]]:
+    def find_sellers_with_items(self, wantlist: List, max_items: int = None) -> Dict[str, List[Dict]]:
         """
         Busca vendedores que tienen múltiples items de la wantlist.
         

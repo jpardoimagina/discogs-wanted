@@ -148,7 +148,7 @@ def demo_seller_aggregation():
             price_str = item['price'].replace('EUR ', '').strip()
             try:
                 total_price += float(price_str)
-            except:
+            except (ValueError, AttributeError):
                 pass
             print(f"      • {item['artist']} - {item['title']}")
             print(f"        Precio: {item['price']}")
